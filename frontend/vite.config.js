@@ -10,8 +10,8 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       manifest: {
-        name: "News Reader",
-        short_name: "News",
+        name: "wombat reader",
+        short_name: "wombat",
         start_url: "/",
         display: "standalone",
       },
