@@ -4,7 +4,7 @@ import { ErrorMessage } from "./ui/ErrorMessage";
 
 export function Article({ article, loading, error, onBack }) {
   return (
-    <div class="font-mono m-2">
+    <div class="grid justify-center font-mono m-2">
       {loading && <Spinner />}
       <ErrorMessage message={error} />
 
@@ -21,22 +21,24 @@ export function Article({ article, loading, error, onBack }) {
         </>
       )}
 
-      <Button onClick={onBack}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="size-6"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
-          />
-        </svg>
-      </Button>
+      <div class="grid justify-center mb-3">
+        <Button onClick={onBack}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+            />
+          </svg>
+        </Button>
+      </div>
     </div>
   );
 }
