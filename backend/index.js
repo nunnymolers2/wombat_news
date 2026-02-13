@@ -4,10 +4,15 @@ import Parser from "rss-parser";
 import { JSDOM } from "jsdom";
 import { Readability } from "@mozilla/readability";
 import puppeteer from "puppeteer-core";
+import path from "path";
+import { fileURLToPath } from "url";
+
 import "dotenv/config";
 
 const app = express();
 const parser = new Parser();
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(cors());
 
@@ -239,3 +244,9 @@ app.get("/detect", async (req, res) => {
 });
 
 app.listen(3001, () => console.log("Backend running on http://localhost:3001"));
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
