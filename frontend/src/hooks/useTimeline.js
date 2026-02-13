@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 
-const BACKEND = "http://localhost:3001";
-
+const BACKEND = "";
 export function useTimeline(feeds) {
   const [timeline, setTimeline] = useState([]);
   const [loading, setLoading] = useState(false);

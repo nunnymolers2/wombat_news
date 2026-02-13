@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-const BACKEND = "http://localhost:3001";
+const BACKEND = "";
 
 export function useArticle() {
   const [article, setArticle] = useState(null);
