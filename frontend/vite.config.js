@@ -17,6 +17,24 @@ export default defineConfig({
         short_name: "wombat",
         start_url: "/",
         display: "standalone",
+        icons: [
+          {
+            src: "pwa_192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "pwa_512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "pwa_512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "any maskable",
+          },
+        ],
       },
     }),
   ],
